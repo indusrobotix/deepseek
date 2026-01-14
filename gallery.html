@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - IndusRoboTix Projects & Workshops</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animations.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore our robotics projects, custom chassis designs, workshops, and customer creations. See IndusRoboTix kits in action across Pakistan.">
+    <meta name="keywords" content="robotics gallery, robot projects, custom chassis, robotics workshops, Pakistan robotics, student projects">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css" id="dark-mode-style" disabled>
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div id="loading-screen">
-        <div class="loading-gears">
-            <div class="gear gear-large">
-                <div class="gear-teeth"></div>
-                <div class="gear-center"></div>
-            </div>
-            <div class="gear gear-small">
-                <div class="gear-teeth"></div>
-                <div class="gear-center"></div>
-            </div>
-            <div class="loading-text">LOADING GALLERY</div>
-        </div>
-    </div>
-
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <span class="logo-icon"><i class="fas fa-robot"></i></span>
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
                 <span class="logo-text">Indus<span class="logo-highlight">RoboTix</span></span>
             </a>
             
@@ -36,16 +36,30 @@
             </button>
             
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="gallery.html" class="active">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="gallery.html" class="active">GALLERY</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                
+                <!-- Dark Mode Toggle in Menu (Mobile) -->
+                <li class="mobile-dark-mode">
+                    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                        <span>Dark Mode</span>
+                    </button>
+                </li>
             </ul>
+            
+            <!-- Dark Mode Toggle (Desktop) -->
+            <button class="dark-mode-toggle desktop" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </nav>
 
+    <!-- Page Header -->
     <header class="page-header">
         <div class="container">
             <h1 class="page-title">Project Gallery</h1>
@@ -53,216 +67,105 @@
         </div>
     </header>
 
-    <section class="gallery-section">
+    <!-- Gallery Filter -->
+    <section class="gallery-filter-section">
         <div class="container">
-            <div class="gallery-filter">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="kits">Robotics Kits</button>
-                <button class="filter-btn" data-filter="chassis">Chassis Designs</button>
-                <button class="filter-btn" data-filter="workshops">Workshops</button>
-                <button class="filter-btn" data-filter="projects">Customer Projects</button>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> All Projects
+                </button>
+                <button class="filter-btn" data-filter="kits">
+                    <i class="fas fa-robot"></i> Robotics Kits
+                </button>
+                <button class="filter-btn" data-filter="chassis">
+                    <i class="fas fa-shapes"></i> Chassis Designs
+                </button>
+                <button class="filter-btn" data-filter="workshops">
+                    <i class="fas fa-chalkboard-teacher"></i> Workshops
+                </button>
+                <button class="filter-btn" data-filter="projects">
+                    <i class="fas fa-project-diagram"></i> Customer Projects
+                </button>
+                <button class="filter-btn" data-filter="events">
+                    <i class="fas fa-calendar-alt"></i> Events
+                </button>
             </div>
-
-            <div class="gallery-grid">
-                <!-- Robotics Kits -->
-                <div class="gallery-item" data-category="kits">
-                    <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Basic Robotics Starter Kit">
-                        <div class="gallery-overlay">
-                            <h3>Basic Robotics Starter Kit</h3>
-                            <p>Our most popular kit for beginners</p>
-                            <button class="view-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="kits">
-                    <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Advanced Automation Kit">
-                        <div class="gallery-overlay">
-                            <h3>Advanced Automation Kit</h3>
-                            <p>For intermediate robotics projects</p>
-                            <button class="view-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Chassis Designs -->
-                <div class="gallery-item" data-category="chassis">
-                    <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Custom Acrylic Chassis">
-                        <div class="gallery-overlay">
-                            <h3>Custom Acrylic Chassis</h3>
-                            <p>Laser-cut acrylic designs</p>
-                            <button class="view-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="chassis">
-                    <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Modular Chassis System">
-                        <div class="gallery-overlay">
-                            <h3>Modular Chassis System</h3>
-                            <p>Expandable design for complex projects</p>
-                            <button class="view-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Workshops -->
-                <div class="gallery-item" data-category="workshops">
-                    <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="School Robotics Workshop">
-                        <div class="gallery-overlay">
-                            <h3>School Robotics Workshop</h3>
-                            <p>Teaching robotics fundamentals to students</p>
-                            <button class="view-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="workshops">
-                    <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="University Workshop">
-                        <div class="gallery-overlay">
-                            <h3>University Workshop</h3>
-                            <p>Advanced robotics concepts for engineering students</p>
-                            <button class="view-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Customer Projects -->
-                <div class="gallery-item" data-category="projects">
-                    <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Line Following Robot">
-                        <div class="gallery-overlay">
-                            <h3>Line Following Robot</h3>
-                            <p>Customer project using our starter kit</p>
-                            <button class="view-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="projects">
-                    <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Obstacle Avoiding Robot">
-                        <div class="gallery-overlay">
-                            <h3>Obstacle Avoiding Robot</h3>
-                            <p>Built with ultrasonic sensors and custom chassis</p>
-                            <button class="view-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- More items -->
-                <div class="gallery-item" data-category="workshops">
-                    <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Teacher Training Session">
-                        <div class="gallery-overlay">
-                            <h3>Teacher Training Session</h3>
-                            <p>Preparing educators to teach robotics</p>
-                            <button class="view-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="chassis">
-                    <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Multi-layer Chassis">
-                        <div class="gallery-overlay">
-                            <h3>Multi-layer Chassis</h3>
-                            <p>Complex design for advanced robotics</p>
-                            <button class="view-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="projects">
-                    <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Robotic Arm Project">
-                        <div class="gallery-overlay">
-                            <h3>Robotic Arm Project</h3>
-                            <p>University project using our components</p>
-                            <button class="view-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="kits">
-                    <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Educational Kit">
-                        <div class="gallery-overlay">
-                            <h3>Educational Robotics Kit</h3>
-                            <p>Designed specifically for classroom use</p>
-                            <button class="view-btn">View Details</button>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="gallery-search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search gallery..." id="gallery-search">
             </div>
         </div>
     </section>
 
-    <section class="video-section">
+    <!-- Gallery Grid -->
+    <section class="gallery-grid-section">
         <div class="container">
-            <h2 class="section-title">See Our Kits in Action</h2>
-            <div class="video-grid">
-                <div class="video-item">
-                    <div class="video-placeholder">
-                        <i class="fas fa-play-circle"></i>
-                        <h3>Assembly Tutorial</h3>
-                        <p>Watch how to assemble our basic robotics kit</p>
-                    </div>
-                </div>
-                <div class="video-item">
-                    <div class="video-placeholder">
-                        <i class="fas fa-play-circle"></i>
-                        <h3>Workshop Highlights</h3>
-                        <p>Highlights from our recent school workshop</p>
-                    </div>
-                </div>
-                <div class="video-item">
-                    <div class="video-placeholder">
-                        <i class="fas fa-play-circle"></i>
-                        <h3>Chassis Design Process</h3>
-                        <p>See how we design custom acrylic chassis</p>
-                    </div>
-                </div>
+            <div class="gallery-stats">
+                <span id="gallery-count">24</span> Projects
+            </div>
+            
+            <div class="gallery-container" id="gallery-container">
+                <!-- Gallery items loaded dynamically -->
+            </div>
+            
+            <div class="gallery-load-more">
+                <button class="btn btn-secondary" id="load-more">
+                    <i class="fas fa-plus"></i> Load More Projects
+                </button>
             </div>
         </div>
     </section>
 
-    <section class="customer-projects">
+    <!-- Customer Projects Showcase -->
+    <section class="projects-showcase">
         <div class="container">
             <h2 class="section-title">Customer Projects Showcase</h2>
-            <div class="projects-showcase">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="University Project">
+            <p class="section-subtitle">Amazing creations built with IndusRoboTix kits</p>
+            
+            <div class="showcase-grid">
+                <div class="showcase-card">
+                    <div class="showcase-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-robot"></i>
+                        </div>
                     </div>
-                    <div class="project-info">
-                        <h3>University Final Year Project</h3>
-                        <p class="project-description">A student team used our advanced kit to build an autonomous delivery robot for their final year project at NED University, Karachi.</p>
-                        <div class="project-tech">
+                    <div class="showcase-content">
+                        <div class="showcase-badge">University Project</div>
+                        <h3>Autonomous Delivery Robot</h3>
+                        <p class="showcase-description">A student team at NED University Karachi built this autonomous delivery robot using our advanced robotics kit. Features include obstacle avoidance, GPS navigation, and remote monitoring.</p>
+                        <div class="showcase-tech">
                             <span class="tech-tag">Arduino</span>
                             <span class="tech-tag">Ultrasonic Sensors</span>
+                            <span class="tech-tag">GPS Module</span>
                             <span class="tech-tag">Custom Chassis</span>
+                        </div>
+                        <div class="showcase-meta">
+                            <span><i class="fas fa-user-graduate"></i> NED University Students</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Karachi</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="School Competition">
+                <div class="showcase-card">
+                    <div class="showcase-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-robot"></i>
+                        </div>
                     </div>
-                    <div class="project-info">
-                        <h3>School Robotics Competition</h3>
-                        <p class="project-description">A local school in Lahore used our educational kits to prepare for and win a regional robotics competition.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Line Following</span>
+                    <div class="showcase-content">
+                        <div class="showcase-badge">School Competition</div>
+                        <h3>Line Follower Race Champion</h3>
+                        <p class="showcase-description">A school in Lahore won the regional robotics competition with this high-speed line follower robot built using our educational kit. Achieved record time in the competition.</p>
+                        <div class="showcase-tech">
                             <span class="tech-tag">IR Sensors</span>
-                            <span class="tech-tag">Educational Kit</span>
+                            <span class="tech-tag">PID Control</span>
+                            <span class="tech-tag">High-speed Motors</span>
+                            <span class="tech-tag">Lightweight Design</span>
+                        </div>
+                        <div class="showcase-meta">
+                            <span><i class="fas fa-school"></i> Lahore Grammar School</span>
+                            <span><i class="fas fa-trophy"></i> 1st Place</span>
                         </div>
                     </div>
                 </div>
@@ -270,106 +173,1596 @@
         </div>
     </section>
 
-    <section class="cta-section">
+    <!-- Workshops Gallery -->
+    <section class="workshops-section">
         <div class="container">
-            <h2>Share Your Project With Us</h2>
-            <p>Have you built something amazing with our kits? We'd love to feature your project in our gallery.</p>
-            <a href="contact.html" class="btn btn-large">Submit Your Project <i class="fas fa-arrow-right"></i></a>
+            <h2 class="section-title">Workshops & Events</h2>
+            <p class="section-subtitle">Bringing robotics education across Pakistan</p>
+            
+            <div class="workshops-grid">
+                <div class="workshop-card">
+                    <div class="workshop-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="workshop-date">
+                            <span class="day">15</span>
+                            <span class="month">Mar</span>
+                        </div>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>University Robotics Workshop</h3>
+                        <p class="workshop-location"><i class="fas fa-map-marker-alt"></i> FAST University, Lahore</p>
+                        <p class="workshop-description">3-day intensive workshop on advanced robotics and automation for engineering students.</p>
+                        <div class="workshop-stats">
+                            <span><i class="fas fa-users"></i> 45 Participants</span>
+                            <span><i class="fas fa-clock"></i> 3 Days</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="workshop-card">
+                    <div class="workshop-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="workshop-date">
+                            <span class="day">22</span>
+                            <span class="month">Feb</span>
+                        </div>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>Teacher Training Program</h3>
+                        <p class="workshop-location"><i class="fas fa-map-marker-alt"></i> Islamabad Model School</p>
+                        <p class="workshop-description">Training educators on integrating robotics into STEM curriculum for middle school students.</p>
+                        <div class="workshop-stats">
+                            <span><i class="fas fa-users"></i> 28 Teachers</span>
+                            <span><i class="fas fa-clock"></i> 2 Days</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="workshop-card">
+                    <div class="workshop-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="workshop-date">
+                            <span class="day">10</span>
+                            <span class="month">Jan</span>
+                        </div>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>High School Robotics Camp</h3>
+                        <p class="workshop-location"><i class="fas fa-map-marker-alt"></i> Karachi Science Academy</p>
+                        <p class="workshop-description">Week-long robotics camp introducing students to programming and robotics fundamentals.</p>
+                        <div class="workshop-stats">
+                            <span><i class="fas fa-users"></i> 60 Students</span>
+                            <span><i class="fas fa-clock"></i> 5 Days</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Video Section -->
+    <section class="video-gallery">
+        <div class="container">
+            <h2 class="section-title">See Our Kits in Action</h2>
+            <p class="section-subtitle">Watch tutorials, workshops, and project demonstrations</p>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="play-button">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="video-duration">8:42</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Assembly Tutorial: Starter Kit</h3>
+                        <p>Step-by-step guide to assembling your IndusRoboTix starter robotics kit</p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-eye"></i> 1.2K views</span>
+                            <span><i class="fas fa-calendar"></i> 2 weeks ago</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="play-button">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="video-duration">15:30</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Workshop Highlights 2024</h3>
+                        <p>Highlights from our robotics workshops across Pakistan universities</p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-eye"></i> 2.5K views</span>
+                            <span><i class="fas fa-calendar"></i> 1 month ago</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="play-button">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="video-duration">6:15</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Chassis Design Process</h3>
+                        <p>See how we design and fabricate custom acrylic chassis for robotics projects</p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-eye"></i> 890 views</span>
+                            <span><i class="fas fa-calendar"></i> 3 months ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="https://youtube.com/indusrobotix" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-youtube"></i> Visit Our YouTube Channel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submit Project CTA -->
+    <section class="submit-project">
+        <div class="container">
+            <div class="submit-content">
+                <div class="submit-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <h2>Share Your Project With Us</h2>
+                <p>Have you built something amazing with IndusRoboTix kits? We'd love to feature your project in our gallery!</p>
+                <a href="contact.html?subject=project-submission" class="btn btn-accent">
+                    <i class="fas fa-upload"></i> Submit Your Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="index.html" class="logo">
-                        <span class="logo-icon"><i class="fas fa-robot"></i></span>
-                        <span class="logo-text">Indus<span class="logo-highlight">RoboTix</span></span>
+                    <a href="index.html" class="logo" style="color: white;">
+                        <div class="logo-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span>Indus<span style="color: #38bdf8;">RoboTix</span></span>
                     </a>
-                    <p>Custom robotics kits with locally sourced components and custom acrylic chassis design.</p>
+                    <p>Showcasing Pakistan's robotics innovation through our projects, workshops, and customer creations.</p>
                 </div>
+                
                 <div class="footer-col">
                     <h3>Gallery Categories</h3>
                     <ul>
-                        <li><a href="gallery.html">Robotics Kits</a></li>
-                        <li><a href="gallery.html">Chassis Designs</a></li>
-                        <li><a href="gallery.html">Workshops</a></li>
-                        <li><a href="gallery.html">Customer Projects</a></li>
+                        <li><a href="gallery.html?filter=kits"><i class="fas fa-robot"></i> Robotics Kits</a></li>
+                        <li><a href="gallery.html?filter=chassis"><i class="fas fa-shapes"></i> Chassis Designs</a></li>
+                        <li><a href="gallery.html?filter=workshops"><i class="fas fa-chalkboard-teacher"></i> Workshops</a></li>
+                        <li><a href="gallery.html?filter=projects"><i class="fas fa-project-diagram"></i> Customer Projects</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li><i class="fas fa-user"></i> Furqan Khatti, Owner</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Pakistan</li>
-                        <li><i class="fas fa-envelope"></i> contact@indusrobotix.pk</li>
-                        <li><i class="fas fa-phone"></i> +92 XXX XXXXXXX</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Share Your Work</h3>
-                    <p>Tag us on social media with your IndusRoboTix projects for a chance to be featured in our gallery.</p>
+                    <h3>Follow Our Journey</h3>
+                    <p>Stay updated with our latest projects and workshops:</p>
                     <div class="social-links">
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <p style="margin-top: 20px; font-size: 0.9rem; color: #94a3b8;">
+                        Tag us with <strong>#IndusRoboTix</strong> to be featured!
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul id="contact-info">
+                        <!-- Loaded from config.js -->
+                    </ul>
+                    <div class="newsletter">
+                        <h4>Gallery Updates</h4>
+                        <p>Get notified when we add new projects:</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; <span id="current-year">2026</span> IndusRoboTix. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Gallery Guidelines</a>
+                    <a href="#">Content Submission</a>
+                    <a href="#">Copyright Notice</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="loading-animation.js"></script>
-    <script src="main.js"></script>
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="lightbox-image">
+                <img src="" alt="" id="lightbox-img">
+            </div>
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+                <div class="lightbox-meta">
+                    <span id="lightbox-category"></span>
+                    <span id="lightbox-date"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="config.js"></script>
     <script>
-        // Gallery filtering functionality
+        // Gallery Data
+        const galleryItems = [
+            {
+                id: 1,
+                title: "Starter Robotics Kit",
+                description: "Our best-selling beginner kit with Arduino Uno and acrylic chassis",
+                category: "kits",
+                tags: ["beginner", "arduino", "educational"],
+                date: "2024-03-15"
+            },
+            {
+                id: 2,
+                title: "Advanced Robotics Kit",
+                description: "ESP32-based kit with multiple sensors and modular design",
+                category: "kits",
+                tags: ["advanced", "esp32", "sensors"],
+                date: "2024-03-10"
+            },
+            {
+                id: 3,
+                title: "Custom Acrylic Chassis",
+                description: "Laser-cut acrylic chassis for line follower robot",
+                category: "chassis",
+                tags: ["acrylic", "laser-cut", "custom"],
+                date: "2024-03-08"
+            },
+            {
+                id: 4,
+                title: "Multi-layer Chassis Design",
+                description: "Complex chassis design for advanced robotics projects",
+                category: "chassis",
+                tags: ["multi-layer", "complex", "design"],
+                date: "2024-03-05"
+            },
+            {
+                id: 5,
+                title: "University Workshop",
+                description: "Robotics workshop at NUST University Islamabad",
+                category: "workshops",
+                tags: ["workshop", "university", "education"],
+                date: "2024-03-01"
+            },
+            {
+                id: 6,
+                title: "School Robotics Camp",
+                description: "Week-long robotics camp for high school students",
+                category: "workshops",
+                tags: ["camp", "school", "students"],
+                date: "2024-02-25"
+            },
+            {
+                id: 7,
+                title: "Line Follower Robot",
+                description: "Customer project: competition-winning line follower",
+                category: "projects",
+                tags: ["customer", "competition", "line-follower"],
+                date: "2024-02-20"
+            },
+            {
+                id: 8,
+                title: "Obstacle Avoiding Robot",
+                description: "Built with ultrasonic sensors and custom programming",
+                category: "projects",
+                tags: ["customer", "obstacle", "ultrasonic"],
+                date: "2024-02-15"
+            },
+            {
+                id: 9,
+                title: "Robotics Competition",
+                description: "Annual robotics competition event in Lahore",
+                category: "events",
+                tags: ["competition", "event", "lifestyle"],
+                date: "2024-02-10"
+            },
+            {
+                id: 10,
+                title: "Educational Kit Assembly",
+                description: "Classroom kit designed for STEM education",
+                category: "kits",
+                tags: ["educational", "classroom", "stem"],
+                date: "2024-02-05"
+            },
+            {
+                id: 11,
+                title: "Circular Chassis Design",
+                description: "Unique circular chassis for specialized applications",
+                category: "chassis",
+                tags: ["circular", "unique", "specialized"],
+                date: "2024-02-01"
+            },
+            {
+                id: 12,
+                title: "Teacher Training Session",
+                description: "Training educators on robotics curriculum integration",
+                category: "workshops",
+                tags: ["teacher", "training", "curriculum"],
+                date: "2024-01-25"
+            },
+            {
+                id: 13,
+                title: "Robotic Arm Project",
+                description: "University final year project using our components",
+                category: "projects",
+                tags: ["university", "robotic-arm", "final-year"],
+                date: "2024-01-20"
+            },
+            {
+                id: 14,
+                title: "Industry Expo 2024",
+                description: "Showcasing our kits at Pakistan's largest tech expo",
+                category: "events",
+                tags: ["expo", "industry", "showcase"],
+                date: "2024-01-15"
+            },
+            {
+                id: 15,
+                title: "Sensor Testing Setup",
+                description: "Advanced sensor array for research applications",
+                category: "kits",
+                tags: ["sensors", "research", "advanced"],
+                date: "2024-01-10"
+            },
+            {
+                id: 16,
+                title: "Modular Chassis System",
+                description: "Expandable chassis design for complex projects",
+                category: "chassis",
+                tags: ["modular", "expandable", "system"],
+                date: "2024-01-05"
+            }
+        ];
+
+        // Gallery Page Functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const filterBtns = document.querySelectorAll('.gallery-filter .filter-btn');
-            const galleryItems = document.querySelectorAll('.gallery-item');
+            // Initialize gallery
+            renderGallery(galleryItems);
+            updateGalleryCount();
             
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
+            // Load contact info
+            const contactInfo = document.getElementById('contact-info');
+            if (contactInfo) {
+                contactInfo.innerHTML = `
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> ${SITE_CONFIG.contact.address}</a></li>
+                    <li><a href="tel:${SITE_CONFIG.contact.phone}"><i class="fas fa-phone"></i> ${SITE_CONFIG.contact.phone}</a></li>
+                    <li><a href="mailto:${SITE_CONFIG.contact.email}"><i class="fas fa-envelope"></i> ${SITE_CONFIG.contact.email}</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> ${SITE_CONFIG.contact.businessHours}</a></li>
+                `;
+            }
+            
+            // Set current year
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Gallery filtering
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
                     // Remove active class from all buttons
-                    filterBtns.forEach(b => b.classList.remove('active'));
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
                     // Add active class to clicked button
                     this.classList.add('active');
                     
-                    const filterValue = this.getAttribute('data-filter');
-                    
-                    // Show/hide gallery items based on filter
-                    galleryItems.forEach(item => {
-                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                            item.style.display = 'block';
-                            setTimeout(() => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'scale(1)';
-                            }, 10);
-                        } else {
-                            item.style.opacity = '0';
-                            item.style.transform = 'scale(0.8)';
-                            setTimeout(() => {
-                                item.style.display = 'none';
-                            }, 300);
-                        }
-                    });
+                    const filter = this.getAttribute('data-filter');
+                    filterGallery(filter);
                 });
             });
             
-            // View button functionality
-            const viewBtns = document.querySelectorAll('.view-btn');
-            viewBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const parentItem = this.closest('.gallery-item');
-                    const category = parentItem.getAttribute('data-category');
-                    const title = this.parentElement.querySelector('h3').textContent;
-                    
-                    alert(`Viewing: ${title}\nCategory: ${category}\n\nThis would open a detailed view in a complete implementation.`);
+            // Gallery search
+            const searchInput = document.getElementById('gallery-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    searchGallery(searchTerm);
+                });
+            }
+            
+            // Load more button
+            const loadMoreBtn = document.getElementById('load-more');
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', function() {
+                    // In a real app, this would load more items from a server
+                    // For now, we'll just show a message
+                    this.innerHTML = '<i class="fas fa-check"></i> All Projects Loaded';
+                    this.disabled = true;
+                });
+            }
+            
+            // Lightbox functionality
+            initializeLightbox();
+            
+            // Newsletter form
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input').value;
+                    if (validateEmail(email)) {
+                        alert('Thank you for subscribing to gallery updates!');
+                        this.querySelector('input').value = '';
+                    } else {
+                        alert('Please enter a valid email address.');
+                    }
+                });
+            }
+        });
+        
+        // Render gallery items
+        function renderGallery(items) {
+            const container = document.getElementById('gallery-container');
+            if (!container) return;
+            
+            container.innerHTML = '';
+            
+            items.forEach(item => {
+                const itemHTML = `
+                    <div class="gallery-item animate-on-scroll" data-category="${item.category}" data-tags="${item.tags.join(',')}">
+                        <div class="gallery-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-${getCategoryIcon(item.category)}"></i>
+                            </div>
+                            <div class="gallery-overlay">
+                                <h3>${item.title}</h3>
+                                <p>${item.description}</p>
+                                <div class="gallery-tags">
+                                    ${item.tags.map(tag => `<span class="gallery-tag">${tag}</span>`).join('')}
+                                </div>
+                                <button class="view-btn" data-id="${item.id}">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>${item.title}</h3>
+                            <div class="gallery-meta">
+                                <span class="gallery-category">
+                                    <i class="fas fa-${getCategoryIcon(item.category)}"></i>
+                                    ${getCategoryName(item.category)}
+                                </span>
+                                <span class="gallery-date">
+                                    <i class="fas fa-calendar"></i>
+                                    ${formatDate(item.date)}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += itemHTML;
+            });
+            
+            // Add click events to view buttons
+            document.querySelectorAll('.view-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = parseInt(this.getAttribute('data-id'));
+                    const item = galleryItems.find(item => item.id === id);
+                    if (item) {
+                        openLightbox(item);
+                    }
                 });
             });
-        });
+        }
+        
+        // Filter gallery
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            let visibleCount = 0;
+            
+            items.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 10);
+                    visibleCount++;
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+            
+            updateGalleryCount(visibleCount);
+        }
+        
+        // Search gallery
+        function searchGallery(searchTerm) {
+            const items = document.querySelectorAll('.gallery-item');
+            let visibleCount = 0;
+            
+            items.forEach(item => {
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                const description = item.querySelector('.gallery-info p')?.textContent.toLowerCase() || '';
+                const tags = item.getAttribute('data-tags').toLowerCase();
+                
+                if (searchTerm === '' || 
+                    title.includes(searchTerm) || 
+                    description.includes(searchTerm) || 
+                    tags.includes(searchTerm)) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 10);
+                    visibleCount++;
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+            
+            updateGalleryCount(visibleCount);
+        }
+        
+        // Update gallery count
+        function updateGalleryCount(count) {
+            const countElement = document.getElementById('gallery-count');
+            if (countElement) {
+                if (count !== undefined) {
+                    countElement.textContent = count;
+                } else {
+                    const visibleItems = document.querySelectorAll('.gallery-item[style*="display: block"]');
+                    countElement.textContent = visibleItems.length;
+                }
+            }
+        }
+        
+        // Get category icon
+        function getCategoryIcon(category) {
+            const icons = {
+                'kits': 'robot',
+                'chassis': 'shapes',
+                'workshops': 'chalkboard-teacher',
+                'projects': 'project-diagram',
+                'events': 'calendar-alt'
+            };
+            return icons[category] || 'image';
+        }
+        
+        // Get category name
+        function getCategoryName(category) {
+            const names = {
+                'kits': 'Robotics Kits',
+                'chassis': 'Chassis Designs',
+                'workshops': 'Workshops',
+                'projects': 'Customer Projects',
+                'events': 'Events'
+            };
+            return names[category] || category;
+        }
+        
+        // Format date
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { 
+                month: 'short', 
+                day: 'numeric',
+                year: 'numeric'
+            });
+        }
+        
+        // Initialize lightbox
+        function initializeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxClose = document.getElementById('lightbox-close');
+            
+            if (lightbox && lightboxClose) {
+                lightboxClose.addEventListener('click', closeLightbox);
+                
+                lightbox.addEventListener('click', function(e) {
+                    if (e.target === lightbox) {
+                        closeLightbox();
+                    }
+                });
+                
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                    }
+                });
+            }
+        }
+        
+        // Open lightbox
+        function openLightbox(item) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            const lightboxDescription = document.getElementById('lightbox-description');
+            const lightboxCategory = document.getElementById('lightbox-category');
+            const lightboxDate = document.getElementById('lightbox-date');
+            
+            if (lightbox && lightboxImg && lightboxTitle) {
+                // In a real app, you would use actual image URLs
+                // For now, we'll use a placeholder
+                lightboxImg.src = `https://via.placeholder.com/800x600/3b82f6/ffffff?text=${encodeURIComponent(item.title)}`;
+                lightboxImg.alt = item.title;
+                lightboxTitle.textContent = item.title;
+                lightboxDescription.textContent = item.description;
+                lightboxCategory.textContent = getCategoryName(item.category);
+                lightboxDate.textContent = formatDate(item.date);
+                
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        // Close lightbox
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+        
+        // Validate email
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+        
+        // Page-specific initialization
+        window.pageInit = function() {
+            // Highlight current page link
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        };
     </script>
+    
+    <style>
+        /* Gallery Page Specific Styles */
+        .page-header {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
+            text-align: center;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+        
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .gallery-filter-section {
+            padding: 40px 0;
+            background: white;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .filter-btn {
+            padding: 10px 20px;
+            background: var(--light-blue);
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            color: var(--primary-blue);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-blue);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        
+        .gallery-search {
+            max-width: 400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .gallery-search input {
+            width: 100%;
+            padding: 14px 20px 14px 50px;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius);
+            font-size: 1rem;
+            transition: var(--transition);
+            background: white;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .gallery-search input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .gallery-search i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+        }
+        
+        .gallery-grid-section {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .gallery-stats {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+            color: #64748b;
+        }
+        
+        .gallery-stats span {
+            font-weight: 700;
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .gallery-item {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            opacity: 1;
+            transform: scale(1);
+            display: block;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .gallery-image {
+            height: 250px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--primary-blue);
+            opacity: 0.3;
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(37, 99, 235, 0.9);
+            color: white;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-overlay h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .gallery-overlay p {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .gallery-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .gallery-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .view-btn {
+            background: white;
+            color: var(--primary-blue);
+            border: none;
+            padding: 10px 24px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .view-btn:hover {
+            background: var(--light-blue);
+            transform: translateY(-2px);
+        }
+        
+        .gallery-info {
+            padding: 20px;
+        }
+        
+        .gallery-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--dark-text);
+        }
+        
+        .gallery-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        .gallery-category,
+        .gallery-date {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .gallery-load-more {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .projects-showcase {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%);
+        }
+        
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .showcase-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+        
+        .showcase-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .showcase-image {
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-teal) 100%);
+            position: relative;
+        }
+        
+        .showcase-content {
+            padding: 30px;
+        }
+        
+        .showcase-badge {
+            display: inline-block;
+            background: var(--accent-orange);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .showcase-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+        
+        .showcase-description {
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .showcase-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .tech-tag {
+            background: var(--light-blue);
+            color: var(--primary-blue);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .showcase-meta {
+            display: flex;
+            gap: 20px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        .showcase-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .workshops-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .workshops-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .workshop-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 2px solid var(--light-blue);
+        }
+        
+        .workshop-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-blue);
+        }
+        
+        .workshop-image {
+            height: 200px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            position: relative;
+        }
+        
+        .workshop-date {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .workshop-date .day {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+        
+        .workshop-date .month {
+            display: block;
+            font-size: 0.9rem;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+        
+        .workshop-content {
+            padding: 25px;
+        }
+        
+        .workshop-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+        
+        .workshop-location {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .workshop-description {
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .workshop-stats {
+            display: flex;
+            gap: 20px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        .workshop-stats span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .video-gallery {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%);
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .video-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .video-thumbnail {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-teal) 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .play-button {
+            font-size: 4rem;
+            color: white;
+            opacity: 0.8;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .video-card:hover .play-button {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        .video-duration {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+        
+        .video-info {
+            padding: 25px;
+        }
+        
+        .video-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+        
+        .video-info p {
+            color: #475569;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        .submit-project {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-teal) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .submit-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .submit-icon {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .submit-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .submit-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .lightbox-content {
+            background: white;
+            border-radius: var(--radius);
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 2001;
+            transition: var(--transition);
+        }
+        
+        .lightbox-close:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: rotate(90deg);
+        }
+        
+        .lightbox-image {
+            height: 500px;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lightbox-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .lightbox-info {
+            padding: 30px;
+        }
+        
+        .lightbox-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+        
+        .lightbox-info p {
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .lightbox-meta {
+            display: flex;
+            gap: 20px;
+            color: #64748b;
+        }
+        
+        .lightbox-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--light-blue);
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .newsletter {
+            margin-top: 20px;
+        }
+        
+        .newsletter h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .newsletter p {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #334155;
+            border-radius: var(--radius);
+            background: #1e293b;
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+        
+        .newsletter-form button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            width: 46px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .newsletter-form button:hover {
+            background: #2563eb;
+        }
+        
+        /* Dark Mode Styles for Gallery Page */
+        body.dark-mode .page-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        
+        body.dark-mode .page-subtitle {
+            color: #94a3b8;
+        }
+        
+        body.dark-mode .gallery-filter-section {
+            background: #1e293b;
+            border-color: #334155;
+        }
+        
+        body.dark-mode .filter-btn {
+            background: #334155;
+            color: #cbd5e1;
+        }
+        
+        body.dark-mode .filter-btn.active {
+            background: #3b82f6;
+            color: white;
+        }
+        
+        body.dark-mode .gallery-search input {
+            background: #1e293b;
+            border-color: #334155;
+            color: white;
+        }
+        
+        body.dark-mode .gallery-search input:focus {
+            border-color: #3b82f6;
+        }
+        
+        body.dark-mode .gallery-grid-section {
+            background: #1e293b;
+        }
+        
+        body.dark-mode .gallery-stats {
+            color: #94a3b8;
+        }
+        
+        body.dark-mode .gallery-item {
+            background: #1e293b;
+        }
+        
+        body.dark-mode .gallery-image {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        
+        body.dark-mode .image-placeholder {
+            color: #3b82f6;
+        }
+        
+        body.dark-mode .gallery-info h3 {
+            color: #e2e8f0;
+        }
+        
+        body.dark-mode .gallery-meta {
+            color: #94a3b8;
+        }
+        
+        body.dark-mode .projects-showcase {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        
+        body.dark-mode .showcase-card {
+            background: #1e293b;
+        }
+        
+        body.dark-mode .showcase-description {
+            color: #cbd5e1;
+        }
+        
+        body.dark-mode .tech-tag {
+            background: #334155;
+            color: #60a5fa;
+        }
+        
+        body.dark-mode .showcase-meta {
+            color: #94a3b8;
+        }
+        
+        body.dark-mode .workshops-section {
+            background: #1e293b;
+        }
+        
+        body.dark-mode .workshop-card {
+            background: #1e293b;
+            border-color: #334155;
+        }
+        
+        body.dark-mode .workshop-card:hover {
+            border-color: #3b82f6;
+        }
+        
+        body.dark-mode .workshop-description {
+            color: #cbd5e1;
+        }
+        
+        body.dark-mode .workshop-image {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        
+        body.dark-mode .workshop-date {
+            background: #334155;
+        }
+        
+        body.dark-mode .workshop-date .day {
+            color: #60a5fa;
+        }
+        
+        body.dark-mode .workshop-date .month {
+            color: #cbd5e1;
+        }
+        
+        body.dark-mode .video-gallery {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        
+        body.dark-mode .video-card {
+            background: #1e293b;
+        }
+        
+        body.dark-mode .video-info p {
+            color: #cbd5e1;
+        }
+        
+        body.dark-mode .lightbox-content {
+            background: #1e293b;
+        }
+        
+        body.dark-mode .lightbox-info h3 {
+            color: #60a5fa;
+        }
+        
+        body.dark-mode .lightbox-info p {
+            color: #cbd5e1;
+        }
+        
+        body.dark-mode .lightbox-meta span {
+            background: #334155;
+            color: #94a3b8;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .showcase-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .lightbox-content {
+                max-width: 95%;
+            }
+            
+            .lightbox-image {
+                height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .filter-buttons {
+                gap: 8px;
+            }
+            
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+            
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            
+            .showcase-grid,
+            .workshops-grid,
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-image,
+            .showcase-image,
+            .workshop-image,
+            .video-thumbnail {
+                height: 200px;
+            }
+            
+            .lightbox-image {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .filter-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .filter-btn {
+                width: 200px;
+                justify-content: center;
+            }
+            
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-overlay {
+                padding: 20px;
+            }
+            
+            .submit-content h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </body>
 </html>
