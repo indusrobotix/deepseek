@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - IndusRoboTix Robotics Kits</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-gears">
+            <div class="gear gear-large">
+                <div class="gear-teeth"></div>
+                <div class="gear-center"></div>
+            </div>
+            <div class="gear gear-small">
+                <div class="gear-teeth"></div>
+                <div class="gear-center"></div>
+            </div>
+            <div class="loading-text">LOADING PRODUCTS</div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-robot"></i></span>
+                <span class="logo-text">Indus<span class="logo-highlight">RoboTix</span></span>
+            </a>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our Robotic Kits & Components</h1>
+            <p class="page-subtitle">High-quality, locally sourced components assembled into custom kits</p>
+        </div>
+    </header>
+
+    <section class="products-section">
+        <div class="container">
+            <div class="category-filter">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="starter">Starter Kits</button>
+                <button class="filter-btn" data-filter="advanced">Advanced Kits</button>
+                <button class="filter-btn" data-filter="components">Components</button>
+            </div>
+
+            <div class="products-grid">
+                <!-- Starter Kit 1 -->
+                <div class="product-card" data-category="starter" id="starter-kit">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Basic Robotics Starter Kit">
+                        <span class="product-badge">Bestseller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Basic Robotics Starter Kit</h3>
+                        <p class="product-description">Perfect for beginners. Includes 2 DC motors, acrylic chassis, basic sensors (IR, ultrasonic), Arduino Uno controller, and assembly instructions.</p>
+                        <div class="product-specs">
+                            <h4>Specifications:</h4>
+                            <ul>
+                                <li><i class="fas fa-microchip"></i> Arduino Uno R3 Controller</li>
+                                <li><i class="fas fa-cogs"></i> 2 DC Motors with Wheels</li>
+                                <li><i class="fas fa-bullseye"></i> IR and Ultrasonic Sensors</li>
+                                <li><i class="fas fa-shapes"></i> Custom Acrylic Chassis</li>
+                                <li><i class="fas fa-book"></i> Step-by-Step Guide Included</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">PKR 8,500</div>
+                        <a href="contact.html" class="btn btn-small">Inquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Advanced Kit -->
+                <div class="product-card" data-category="advanced" id="advanced-kit">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Advanced Automation Kit">
+                        <span class="product-badge">Popular</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Advanced Automation Kit</h3>
+                        <p class="product-description">For intermediate users. Features multiple sensors, programmable controller, modular chassis, and wireless capabilities.</p>
+                        <div class="product-specs">
+                            <h4>Specifications:</h4>
+                            <ul>
+                                <li><i class="fas fa-microchip"></i> ESP32 Microcontroller</li>
+                                <li><i class="fas fa-cogs"></i> 4 DC Motors with Encoders</li>
+                                <li><i class="fas fa-bullseye"></i> Multiple Sensors Package</li>
+                                <li><i class="fas fa-wifi"></i> WiFi & Bluetooth Enabled</li>
+                                <li><i class="fas fa-shapes"></i> Modular Acrylic Chassis</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">PKR 15,000</div>
+                        <a href="contact.html" class="btn btn-small">Inquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Educational Kit -->
+                <div class="product-card" data-category="starter">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Educational Robotics Kit">
+                    </div>
+                    <div class="product-info">
+                        <h3>Educational Robotics Kit</h3>
+                        <p class="product-description">Designed for schools and institutions. Includes curriculum materials and teacher resources.</p>
+                        <div class="product-specs">
+                            <h4>Specifications:</h4>
+                            <ul>
+                                <li><i class="fas fa-microchip"></i> Arduino Compatible Board</li>
+                                <li><i class="fas fa-cogs"></i> Motor & Sensor Bundle</li>
+                                <li><i class="fas fa-graduation-cap"></i> Educational Curriculum</li>
+                                <li><i class="fas fa-users"></i> Group Activity Materials</li>
+                                <li><i class="fas fa-shapes"></i> Durable Acrylic Frame</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">PKR 12,500</div>
+                        <a href="contact.html" class="btn btn-small">Inquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Component: Custom Chassis -->
+                <div class="product-card" data-category="components">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Custom Acrylic Chassis">
+                    </div>
+                    <div class="product-info">
+                        <h3>Custom Acrylic Chassis</h3>
+                        <p class="product-description">Custom-designed acrylic chassis for your specific robotics project. We design and fabricate based on your requirements.</p>
+                        <div class="product-specs">
+                            <h4>Features:</h4>
+                            <ul>
+                                <li><i class="fas fa-ruler-combined"></i> Custom Dimensions</li>
+                                <li><i class="fas fa-layer-group"></i> 3-5mm Acrylic Thickness</li>
+                                <li><i class="fas fa-palette"></i> Clear/Colored Options</li>
+                                <li><i class="fas fa-tools"></i> Precision Laser Cut</li>
+                                <li><i class="fas fa-screwdriver"></i> Pre-drilled Mounting Holes</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">From PKR 1,500</div>
+                        <a href="contact.html" class="btn btn-small">Request Custom Design</a>
+                    </div>
+                </div>
+
+                <!-- Component: Sensor Kit -->
+                <div class="product-card" data-category="components">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sensor Kit">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sensor Starter Kit</h3>
+                        <p class="product-description">Collection of essential sensors for robotics projects. Compatible with Arduino and Raspberry Pi.</p>
+                        <div class="product-specs">
+                            <h4>Includes:</h4>
+                            <ul>
+                                <li><i class="fas fa-temperature-high"></i> Temperature & Humidity</li>
+                                <li><i class="fas fa-eye"></i> Ultrasonic Distance Sensor</li>
+                                <li><i class="fas fa-lightbulb"></i> Light & Sound Sensors</li>
+                                <li><i class="fas fa-compass"></i> Motion & Tilt Sensors</li>
+                                <li><i class="fas fa-plug"></i> Jumper Wires & Connectors</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">PKR 3,200</div>
+                        <a href="contact.html" class="btn btn-small">Inquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Motor & Driver Bundle -->
+                <div class="product-card" data-category="components">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Motor Bundle">
+                    </div>
+                    <div class="product-info">
+                        <h3>Motor & Driver Bundle</h3>
+                        <p class="product-description">Complete motor setup with drivers and controllers for robotics projects.</p>
+                        <div class="product-specs">
+                            <h4>Bundle Includes:</h4>
+                            <ul>
+                                <li><i class="fas fa-cog"></i> 4x DC Motors (300 RPM)</li>
+                                <li><i class="fas fa-tachometer-alt"></i> L298N Motor Driver</li>
+                                <li><i class="fas fa-battery-full"></i> Power Supply Components</li>
+                                <li><i class="fas fa-project-diagram"></i> Wiring Harness</li>
+                                <li><i class="fas fa-wrench"></i> Mounting Hardware</li>
+                            </ul>
+                        </div>
+                        <div class="product-price">PKR 4,500</div>
+                        <a href="contact.html" class="btn btn-small">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Component Pricing</h2>
+            <div class="pricing-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Description</th>
+                            <th>Price (PKR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Arduino Uno R3</td>
+                            <td>Microcontroller Board</td>
+                            <td>2,500</td>
+                        </tr>
+                        <tr>
+                            <td>ESP32 Development Board</td>
+                            <td>WiFi & Bluetooth Enabled</td>
+                            <td>3,200</td>
+                        </tr>
+                        <tr>
+                            <td>DC Motor (300 RPM)</td>
+                            <td>With Encoder</td>
+                            <td>800</td>
+                        </tr>
+                        <tr>
+                            <td>Ultrasonic Sensor</td>
+                            <td>HC-SR04 Distance Sensor</td>
+                            <td>450</td>
+                        </tr>
+                        <tr>
+                            <td>Custom Acrylic Chassis</td>
+                            <td>Basic Design (20x15cm)</td>
+                            <td>1,500</td>
+                        </tr>
+                        <tr>
+                            <td>Motor Driver (L298N)</td>
+                            <td>Dual H-Bridge Driver</td>
+                            <td>650</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center">
+                <p class="note">Note: Prices are subject to change. Contact us for bulk orders and educational discounts.</p>
+                <a href="contact.html" class="btn btn-primary">Get Custom Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon"><i class="fas fa-robot"></i></span>
+                        <span class="logo-text">Indus<span class="logo-highlight">RoboTix</span></span>
+                    </a>
+                    <p>Custom robotics kits with locally sourced components and custom acrylic chassis design.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Product Categories</h3>
+                    <ul>
+                        <li><a href="products.html#starter-kit">Starter Kits</a></li>
+                        <li><a href="products.html#advanced-kit">Advanced Kits</a></li>
+                        <li><a href="products.html">Components</a></li>
+                        <li><a href="services.html">Custom Assembly</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-user"></i> Furqan Khatti, Owner</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Pakistan</li>
+                        <li><i class="fas fa-envelope"></i> contact@indusrobotix.pk</li>
+                        <li><i class="fas fa-phone"></i> +92 XXX XXXXXXX</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Need Help?</h3>
+                    <p>Have questions about our products? Contact us for expert advice.</p>
+                    <a href="contact.html" class="btn btn-small">Contact Support</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> IndusRoboTix. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="loading-animation.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // Product filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Show/hide products based on filter
+                    productCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
