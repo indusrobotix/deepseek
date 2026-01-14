@@ -1,4 +1,4 @@
-// DOM ready function
+// DOM ready
 document.addEventListener('DOMContentLoaded', function() {
     // Set current year in footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
