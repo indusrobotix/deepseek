@@ -27,21 +27,45 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add fade-in animation to elements when they come into view
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
+    // Search bar functionality
+    const searchInput = document.querySelector('.search-bar input');
+    if (searchInput) {
+        searchInput.addEventListener('focus', function() {
+            this.parentElement.style.display = 'block';
+        });
+        
+        searchInput.addEventListener('blur', function() {
+            if (window.innerWidth <= 768 && !this.value) {
+                this.parentElement.style.display = 'none';
             }
         });
-    }, observerOptions);
+    }
     
-    // Observe elements to animate
-    const animatedElements = document.querySelectorAll('.offering-card, .product-card, .testimonial-card, .service-card, .value-card, .gallery-item');
-    animatedElements.forEach(el => observer.observe(el));
+    // Animate stats counting
+    const stats = document.querySelectorAll('.stat-number');
+    stats.forEach(stat => {
+        const target = parseInt(stat.textContent);
+        let current = 0;
+        const increment = target / 100;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            stat.textContent = Math.floor(current) + (stat.textContent.includes('%') ? '%' : '+');
+        }, 20);
+    });
+    
+    // Add hover effects to cards
+    const cards = document.querySelectorAll('.why-card, .product-card, .testimonial-card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.zIndex = '10';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.zIndex = '1';
+        });
+    });
 });
