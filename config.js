@@ -12,10 +12,10 @@ const SITE_CONFIG = {
     
     // Contact Information
     contact: {
-        email: "info@indusrobotix.pk",
-        phone: "+92 300 1234567",
-        address: "Tech Innovation Hub, Lahore, Pakistan",
-        businessHours: "Mon-Sat: 9:00 AM - 6:00 PM"
+        email: "indusrobotix@gmail.com",
+        phone: "+92 312 1179306",
+        address: "Saddar, Karachi, Pakistan",
+        businessHours: "Mon-Sat: 1:00 PM - 11:00 PM"
     },
     
     // Social Media Links
@@ -29,8 +29,8 @@ const SITE_CONFIG = {
     
     // Business Stats
     stats: {
-        kitsDelivered: "500+",
-        customDesigns: "50+",
+        kitsDelivered: "10+",
+        customDesigns: "5+",
         localSourcing: "100%",
         satisfactionRate: "98%"
     },
