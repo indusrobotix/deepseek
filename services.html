@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - IndusRoboTix Custom Robotics Solutions</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animations.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Custom robotics solutions including kit assembly, chassis design, workshops, and technical consultation. Serving Pakistan's STEM community.">
+    <meta name="keywords" content="robotics services, custom kit assembly, chassis design, robotics workshops, technical consultation, Pakistan robotics">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css" id="dark-mode-style" disabled>
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div id="loading-screen">
-        <div class="loading-gears">
-            <div class="gear gear-large">
-                <div class="gear-teeth"></div>
-                <div class="gear-center"></div>
-            </div>
-            <div class="gear gear-small">
-                <div class="gear-teeth"></div>
-                <div class="gear-center"></div>
-            </div>
-            <div class="loading-text">INITIALIZING SERVICES</div>
-        </div>
-    </div>
-
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <span class="logo-icon"><i class="fas fa-robot"></i></span>
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
                 <span class="logo-text">Indus<span class="logo-highlight">RoboTix</span></span>
             </a>
             
@@ -36,232 +36,1028 @@
             </button>
             
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="services.html" class="active">SERVICES</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                
+                <!-- Dark Mode Toggle in Menu (Mobile) -->
+                <li class="mobile-dark-mode">
+                    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                        <span>Dark Mode</span>
+                    </button>
+                </li>
             </ul>
+            
+            <!-- Dark Mode Toggle (Desktop) -->
+            <button class="dark-mode-toggle desktop" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </nav>
 
+    <!-- Page Header -->
     <header class="page-header">
         <div class="container">
-            <h1 class="page-title">Our Services</h1>
-            <p class="page-subtitle">Custom robotics solutions tailored to your specific needs</p>
+            <h1 class="page-title">Our Robotics Services</h1>
+            <p class="page-subtitle">Comprehensive robotics solutions from custom assembly to educational workshops</p>
         </div>
     </header>
 
-    <section class="services-intro">
+    <!-- Services Introduction -->
+    <section class="intro-section">
         <div class="container">
             <div class="intro-content">
                 <h2>Tailored Robotics Solutions</h2>
-                <p>At IndusRoboTix, we go beyond standard kits. We provide comprehensive robotics solutions including custom kit assembly, chassis design, and technical consultation to bring your robotics projects to life.</p>
+                <p>At IndusRoboTix, we provide end-to-end robotics solutions designed to meet your specific needs. Whether you're a student starting your robotics journey, an educator looking for classroom resources, or a professional working on an industrial project, we have the expertise to support you.</p>
+                <p>Our locally sourced components and custom acrylic chassis design set us apart, ensuring quality and affordability for our Pakistani customers.</p>
             </div>
         </div>
     </section>
 
-    <section class="services-section">
+    <!-- Main Services -->
+    <section class="services-main">
         <div class="container">
-            <div class="services-grid">
-                <!-- Custom Kit Assembly -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Custom Kit Assembly</h3>
-                    <p>We assemble custom robotics kits based on your specific requirements. Choose from our locally sourced components and we'll create the perfect kit for your project.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Component selection guidance</li>
-                        <li><i class="fas fa-check-circle"></i> Professional assembly</li>
-                        <li><i class="fas fa-check-circle"></i> Quality testing</li>
-                        <li><i class="fas fa-check-circle"></i> Documentation included</li>
-                    </ul>
-                    <div class="service-cta">
-                        <a href="contact.html" class="btn btn-small">Request Custom Assembly</a>
-                    </div>
-                </div>
+            <h2 class="section-title">Our Core Services</h2>
+            <p class="section-subtitle">Comprehensive solutions for all your robotics needs</p>
+            
+            <div class="services-grid" id="services-container">
+                <!-- Services loaded from config.js -->
+            </div>
+        </div>
+    </section>
 
-                <!-- Chassis Design -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shapes"></i>
+    <!-- Detailed Services -->
+    <section class="detailed-services">
+        <div class="container">
+            <div class="service-detail-card">
+                <div class="service-detail-image">
+                    <i class="fas fa-tools service-detail-icon"></i>
+                </div>
+                <div class="service-detail-content">
+                    <h3>Custom Kit Assembly</h3>
+                    <p>We assemble complete robotics kits based on your specific requirements. Choose from our wide range of locally sourced components, and we'll create the perfect kit for your project.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Component Selection</h4>
+                                <p>Expert guidance on choosing the right components for your project</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Professional Assembly</h4>
+                                <p>Skilled technicians assemble and test every component</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Quality Testing</h4>
+                                <p>Rigorous testing ensures your kit works perfectly</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Documentation</h4>
+                                <p>Complete assembly guide and technical documentation included</p>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <a href="contact.html?service=custom-assembly" class="btn btn-primary">
+                        <i class="fas fa-wrench"></i> Request Custom Assembly
+                    </a>
+                </div>
+            </div>
+            
+            <div class="service-detail-card">
+                <div class="service-detail-content">
                     <h3>Custom Acrylic Chassis Design</h3>
                     <p>Our specialty service: designing and fabricating custom acrylic chassis for your robotics projects. We create durable, precision-cut chassis tailored to your specifications.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> CAD design consultation</li>
-                        <li><i class="fas fa-check-circle"></i> Precision laser cutting</li>
-                        <li><i class="fas fa-check-circle"></i> Multiple thickness options</li>
-                        <li><i class="fas fa-check-circle"></i> Clear or colored acrylic</li>
-                    </ul>
-                    <div class="service-cta">
-                        <a href="contact.html" class="btn btn-small">Design Your Chassis</a>
+                    
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>CAD Design Consultation</h4>
+                                <p>Work with our designers to create the perfect chassis</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Precision Laser Cutting</h4>
+                                <p>High-precision laser cutting for perfect fit and finish</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Multiple Options</h4>
+                                <p>Choose from various thicknesses and colors</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Fast Turnaround</h4>
+                                <p>Quick design and production times</p>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <a href="contact.html?service=chassis-design" class="btn btn-primary">
+                        <i class="fas fa-ruler-combined"></i> Design Your Chassis
+                    </a>
                 </div>
-
-                <!-- Technical Consultation -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Technical Consultation</h3>
-                    <p>Get expert advice for your robotics projects. Our consultation services help you choose the right components, design effective solutions, and troubleshoot technical challenges.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Project planning assistance</li>
-                        <li><i class="fas fa-check-circle"></i> Component selection advice</li>
-                        <li><i class="fas fa-check-circle"></i> Technical troubleshooting</li>
-                        <li><i class="fas fa-check-circle"></i> Ongoing support available</li>
-                    </ul>
-                    <div class="service-cta">
-                        <a href="contact.html" class="btn btn-small">Schedule Consultation</a>
-                    </div>
+                <div class="service-detail-image">
+                    <i class="fas fa-shapes service-detail-icon"></i>
                 </div>
-
-                <!-- Educational Workshops -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
+            </div>
+            
+            <div class="service-detail-card">
+                <div class="service-detail-image">
+                    <i class="fas fa-chalkboard-teacher service-detail-icon"></i>
+                </div>
+                <div class="service-detail-content">
                     <h3>Educational Workshops</h3>
-                    <p>We conduct robotics workshops for schools, universities, and organizations. Our hands-on sessions teach robotics fundamentals and practical applications.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Curriculum development</li>
-                        <li><i class="fas fa-check-circle"></i> Hands-on training sessions</li>
-                        <li><i class="fas fa-check-circle"></i> Kit provisioning for groups</li>
-                        <li><i class="fas fa-check-circle"></i> Teacher training programs</li>
-                    </ul>
-                    <div class="service-cta">
-                        <a href="contact.html" class="btn btn-small">Inquire About Workshops</a>
+                    <p>We conduct robotics workshops for schools, universities, and organizations across Pakistan. Our hands-on sessions teach robotics fundamentals and practical applications.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Curriculum Development</h4>
+                                <p>Customized curriculum for different age groups and skill levels</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Hands-on Training</h4>
+                                <p>Practical, interactive learning experiences</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Kit Provisioning</h4>
+                                <p>We provide all necessary kits and materials</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Teacher Training</h4>
+                                <p>Training programs for educators</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Bulk Order Solutions -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-boxes"></i>
+                    
+                    <div class="workshop-types">
+                        <h4>Workshop Types:</h4>
+                        <div class="type-tags">
+                            <span class="type-tag">Beginner Robotics</span>
+                            <span class="type-tag">Arduino Programming</span>
+                            <span class="type-tag">Advanced Automation</span>
+                            <span class="type-tag">STEM Integration</span>
+                            <span class="type-tag">Competition Prep</span>
+                        </div>
                     </div>
-                    <h3>Bulk Order Solutions</h3>
-                    <p>Special pricing and customized solutions for educational institutions, businesses, and organizations requiring multiple kits or components.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Volume discounts</li>
-                        <li><i class="fas fa-check-circle"></i> Custom branding options</li>
-                        <li><i class="fas fa-check-circle"></i> Staged delivery available</li>
-                        <li><i class="fas fa-check-circle"></i> Dedicated account manager</li>
-                    </ul>
-                    <div class="service-cta">
-                        <a href="contact.html" class="btn btn-small">Request Bulk Quote</a>
-                    </div>
-                </div>
-
-                <!-- Repair & Maintenance -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-wrench"></i>
-                    </div>
-                    <h3>Repair & Maintenance</h3>
-                    <p>We provide repair services for robotics kits and components. Our technical team can diagnose issues and restore your robotics equipment to working condition.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Component diagnostics</li>
-                        <li><i class="fas fa-check-circle"></i> Repair services</li>
-                        <li><i class="fas fa-check-circle"></i> Replacement parts</li>
-                        <li><i class="fas fa-check-circle"></i> Maintenance contracts</li>
-                    </ul>
-                    <div class="service-cta">
-                        <a href="contact.html" class="btn btn-small">Request Repair Service</a>
-                    </div>
+                    
+                    <a href="contact.html?service=workshops" class="btn btn-primary">
+                        <i class="fas fa-calendar-alt"></i> Schedule Workshop
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Service Process -->
     <section class="process-section">
         <div class="container">
             <h2 class="section-title">Our Service Process</h2>
+            <p class="section-subtitle">How we work to deliver exceptional robotics solutions</p>
+            
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
-                    <h3>Consultation</h3>
-                    <p>We discuss your requirements, budget, and timeline to understand your needs.</p>
+                    <div class="step-content">
+                        <h3>Consultation</h3>
+                        <p>We discuss your requirements, budget, and timeline to understand your specific needs</p>
+                    </div>
                 </div>
+                
                 <div class="process-step">
                     <div class="step-number">2</div>
-                    <h3>Design & Planning</h3>
-                    <p>Our team creates a customized solution with component selection and design.</p>
+                    <div class="step-content">
+                        <h3>Design & Planning</h3>
+                        <p>Our team creates a customized solution with component selection and design specifications</p>
+                    </div>
                 </div>
+                
                 <div class="process-step">
                     <div class="step-number">3</div>
-                    <h3>Quotation</h3>
-                    <p>You receive a detailed quote with pricing and specifications for approval.</p>
+                    <div class="step-content">
+                        <h3>Quotation</h3>
+                        <p>You receive a detailed quote with pricing, specifications, and timeline for approval</p>
+                    </div>
                 </div>
+                
                 <div class="process-step">
                     <div class="step-number">4</div>
-                    <h3>Assembly & Testing</h3>
-                    <p>We source components, assemble your kit, and perform quality testing.</p>
+                    <div class="step-content">
+                        <h3>Assembly & Testing</h3>
+                        <p>We source components, assemble your solution, and perform rigorous quality testing</p>
+                    </div>
                 </div>
+                
                 <div class="process-step">
                     <div class="step-number">5</div>
-                    <h3>Delivery & Support</h3>
-                    <p>Your custom kit is delivered with documentation and ongoing support.</p>
+                    <div class="step-content">
+                        <h3>Delivery & Support</h3>
+                        <p>Your solution is delivered with complete documentation and ongoing technical support</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta-section">
+    <!-- Additional Services -->
+    <section class="additional-services">
         <div class="container">
-            <h2>Need a Custom Robotics Solution?</h2>
-            <p>Contact us to discuss your project requirements and get a personalized quote.</p>
-            <a href="contact.html" class="btn btn-large">Start Your Project <i class="fas fa-arrow-right"></i></a>
+            <h2 class="section-title">Additional Services</h2>
+            <p class="section-subtitle">Specialized solutions for specific needs</p>
+            
+            <div class="additional-grid">
+                <div class="additional-card">
+                    <div class="additional-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h3>Bulk & Institutional Orders</h3>
+                    <p>Special pricing and customized solutions for educational institutions, businesses, and organizations requiring multiple kits.</p>
+                    <ul>
+                        <li>Volume discounts</li>
+                        <li>Custom branding options</li>
+                        <li>Staged delivery</li>
+                        <li>Dedicated account manager</li>
+                    </ul>
+                    <a href="contact.html?service=bulk-orders" class="btn btn-small btn-secondary">
+                        Inquire About Bulk Orders
+                    </a>
+                </div>
+                
+                <div class="additional-card">
+                    <div class="additional-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Repair & Maintenance</h3>
+                    <p>Professional repair services for robotics kits and components. We diagnose issues and restore your equipment to working condition.</p>
+                    <ul>
+                        <li>Component diagnostics</li>
+                        <li>Repair services</li>
+                        <li>Replacement parts</li>
+                        <li>Maintenance contracts</li>
+                    </ul>
+                    <a href="contact.html?service=repair" class="btn btn-small btn-secondary">
+                        Request Repair Service
+                    </a>
+                </div>
+                
+                <div class="additional-card">
+                    <div class="additional-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Technical Consultation</h3>
+                    <p>Get expert advice for your robotics projects. Our consultation services help you choose components, design solutions, and troubleshoot challenges.</p>
+                    <ul>
+                        <li>Project planning</li>
+                        <li>Component selection</li>
+                        <li>Technical troubleshooting</li>
+                        <li>Ongoing support</li>
+                    </ul>
+                    <a href="contact.html?service=consultation" class="btn btn-small btn-secondary">
+                        Schedule Consultation
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Common questions about our services</p>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">How long does custom assembly take?</h3>
+                    <p class="faq-answer">Standard assembly takes 3-5 business days. Complex custom projects may take 7-10 days. We'll provide a specific timeline during consultation.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I provide my own components for assembly?</h3>
+                    <p class="faq-answer">Yes, we can assemble kits using components you provide. We'll test everything to ensure compatibility and functionality.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you offer warranty on your services?</h3>
+                    <p class="faq-answer">Yes! All our services come with a 3-month warranty. Custom chassis designs have a 6-month warranty against manufacturing defects.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">What areas do you serve for workshops?</h3>
+                    <p class="faq-answer">We conduct workshops across Pakistan, with regular sessions in major cities. Contact us to schedule a workshop in your location.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I visit your workshop?</h3>
+                    <p class="faq-answer">Yes! We welcome visitors by appointment. Contact us to schedule a visit to see our assembly process and facilities.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you offer after-sales support?</h3>
+                    <p class="faq-answer">Absolutely! We provide free technical support for 6 months after purchase. Extended support plans are also available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Start Your Robotics Project?</h2>
+                <p class="cta-subtitle">Contact us to discuss your requirements and get a personalized quote for our services.</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-accent btn-large">
+                        <i class="fas fa-rocket"></i> Get Started Today
+                    </a>
+                    <a href="tel:+923001234567" class="btn btn-secondary btn-large">
+                        <i class="fas fa-phone"></i> Call Us Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="index.html" class="logo">
-                        <span class="logo-icon"><i class="fas fa-robot"></i></span>
-                        <span class="logo-text">Indus<span class="logo-highlight">RoboTix</span></span>
+                    <a href="index.html" class="logo" style="color: white;">
+                        <div class="logo-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span>Indus<span style="color: #38bdf8;">RoboTix</span></span>
                     </a>
-                    <p>Custom robotics solutions with locally sourced components and custom acrylic chassis design.</p>
+                    <p>Pakistan's premier robotics provider, delivering custom solutions with precision engineering and local expertise.</p>
                 </div>
+                
                 <div class="footer-col">
                     <h3>Our Services</h3>
                     <ul>
-                        <li><a href="services.html">Custom Kit Assembly</a></li>
-                        <li><a href="services.html">Chassis Design</a></li>
-                        <li><a href="services.html">Technical Consultation</a></li>
-                        <li><a href="services.html">Educational Workshops</a></li>
+                        <li><a href="services.html"><i class="fas fa-tools"></i> Custom Kit Assembly</a></li>
+                        <li><a href="services.html"><i class="fas fa-ruler-combined"></i> Chassis Design</a></li>
+                        <li><a href="services.html"><i class="fas fa-chalkboard-teacher"></i> Workshops</a></li>
+                        <li><a href="services.html"><i class="fas fa-headset"></i> Consultation</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li><i class="fas fa-user"></i> Furqan Khatti, Owner</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Pakistan</li>
-                        <li><i class="fas fa-envelope"></i> contact@indusrobotix.pk</li>
-                        <li><i class="fas fa-phone"></i> +92 XXX XXXXXXX</li>
-                    </ul>
-                </div>
+                
                 <div class="footer-col">
                     <h3>Service Hours</h3>
                     <ul>
-                        <li><strong>Mon-Fri:</strong> 9:00 AM - 6:00 PM</li>
-                        <li><strong>Saturday:</strong> 10:00 AM - 4:00 PM</li>
-                        <li><strong>Sunday:</strong> Closed</li>
-                        <li>Emergency support available</li>
+                        <li><a href="#"><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</a></li>
+                        <li><a href="#"><i class="fas fa-clock"></i> Saturday: 10:00 AM - 4:00 PM</a></li>
+                        <li><a href="#"><i class="fas fa-clock"></i> Sunday: Closed</a></li>
+                        <li><a href="#"><i class="fas fa-phone"></i> Emergency Support Available</a></li>
                     </ul>
                 </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul id="contact-info">
+                        <!-- Loaded from config.js -->
+                    </ul>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; <span id="current-year">2026</span> IndusRoboTix. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Service Agreement</a>
+                    <a href="#">Warranty Information</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="loading-animation.js"></script>
-    <script src="main.js"></script>
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="config.js"></script>
+    <script>
+        // Services Page Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load services
+            const servicesContainer = document.getElementById('services-container');
+            if (servicesContainer) {
+                const extendedServices = [
+                    ...SITE_CONFIG.services,
+                    {
+                        name: "Technical Consultation",
+                        icon: "fa-headset",
+                        description: "Get expert advice for your robotics projects, from component selection to troubleshooting."
+                    },
+                    {
+                        name: "Bulk Orders",
+                        icon: "fa-boxes",
+                        description: "Special pricing and solutions for educational institutions and businesses."
+                    },
+                    {
+                        name: "Workshops",
+                        icon: "fa-chalkboard-teacher",
+                        description: "Hands-on robotics training for schools, universities, and organizations."
+                    },
+                    {
+                        name: "Repair & Maintenance",
+                        icon: "fa-wrench",
+                        description: "Professional repair services for robotics kits and components."
+                    }
+                ];
+                
+                extendedServices.forEach(service => {
+                    const serviceHTML = `
+                        <div class="why-card animate-on-scroll">
+                            <div class="why-icon">
+                                <i class="fas ${service.icon}"></i>
+                            </div>
+                            <h3>${service.name}</h3>
+                            <p>${service.description}</p>
+                            <a href="contact.html?service=${service.name.toLowerCase().replace(/\s+/g, '-')}" class="btn btn-small btn-secondary" style="margin-top: 15px;">
+                                Learn More
+                            </a>
+                        </div>
+                    `;
+                    servicesContainer.innerHTML += serviceHTML;
+                });
+            }
+            
+            // Load contact info
+            const contactInfo = document.getElementById('contact-info');
+            if (contactInfo) {
+                contactInfo.innerHTML = `
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> ${SITE_CONFIG.contact.address}</a></li>
+                    <li><a href="tel:${SITE_CONFIG.contact.phone}"><i class="fas fa-phone"></i> ${SITE_CONFIG.contact.phone}</a></li>
+                    <li><a href="mailto:${SITE_CONFIG.contact.email}"><i class="fas fa-envelope"></i> ${SITE_CONFIG.contact.email}</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> ${SITE_CONFIG.contact.businessHours}</a></li>
+                `;
+            }
+            
+            // Set current year
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // FAQ Toggle
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const isVisible = answer.style.display === 'block';
+                    
+                    // Close all other answers
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        ans.style.display = 'none';
+                        ans.previousElementSibling.classList.remove('active');
+                    });
+                    
+                    // Toggle current answer
+                    if (!isVisible) {
+                        answer.style.display = 'block';
+                        this.classList.add('active');
+                    }
+                });
+            });
+        });
+        
+        // Page-specific initialization
+        window.pageInit = function() {
+            // Highlight current page link
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        };
+    </script>
+    
+    <style>
+        /* Services Page Specific Styles */
+        .page-header {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
+            text-align: center;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+        
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .intro-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .intro-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+        
+        .intro-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 20px;
+        }
+        
+        .services-main {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%);
+        }
+        
+        .services-main .services-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .detailed-services {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .service-detail-card {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+        
+        .service-detail-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .service-detail-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .service-detail-icon {
+            font-size: 8rem;
+            color: rgba(37, 99, 235, 0.1);
+            display: block;
+            text-align: center;
+        }
+        
+        .service-detail-content {
+            flex: 2;
+        }
+        
+        .service-detail-content h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+        }
+        
+        .service-detail-content > p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #475569;
+            margin-bottom: 30px;
+        }
+        
+        .service-features {
+            margin: 30px 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-item i {
+            color: var(--secondary-teal);
+            font-size: 1.2rem;
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+        
+        .feature-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .feature-item p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+        
+        .workshop-types {
+            margin: 30px 0;
+        }
+        
+        .workshop-types h4 {
+            margin-bottom: 15px;
+            color: var(--dark-text);
+        }
+        
+        .type-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .type-tag {
+            background: var(--light-blue);
+            color: var(--primary-blue);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .process-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%);
+        }
+        
+        .process-steps {
+            max-width: 1000px;
+            margin: 40px auto 0;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-teal) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+        
+        .step-content p {
+            color: #475569;
+            line-height: 1.7;
+        }
+        
+        .additional-services {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .additional-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .additional-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 2px solid var(--light-blue);
+            transition: var(--transition);
+        }
+        
+        .additional-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-blue);
+        }
+        
+        .additional-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--light-blue);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+        
+        .additional-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+        
+        .additional-card p {
+            color: #475569;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .additional-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 25px;
+        }
+        
+        .additional-card ul li {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+            color: #64748b;
+        }
+        
+        .additional-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-teal);
+            font-weight: bold;
+        }
+        
+        .faq-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%);
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .faq-item {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .faq-item:hover {
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .faq-question {
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            position: relative;
+            padding-right: 30px;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 1.5rem;
+            color: var(--secondary-teal);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-question.active::after {
+            content: '-';
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            color: #475569;
+            line-height: 1.7;
+            display: none;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        /* Dark Mode Styles for Services Page */
+        body.dark-mode .page-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        
+        body.dark-mode .page-subtitle {
+            color: #94a3b8;
+        }
+        
+        body.dark-mode .intro-section {
+            background: #1e293b;
+        }
+        
+        body.dark-mode .intro-content p {
+            color: #cbd5e1;
+        }
+        
+        body.dark-mode .services-main {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        
+        body.dark-mode .detailed-services {
+            background: #1e293b;
+        }
+        
+        body.dark-mode .service-detail-content > p {
+            color: #cbd5e1;
+        }
+        
+        body.dark-mode .service-detail-icon {
+            color: rgba(59, 130, 246, 0.1);
+        }
+        
+        body.dark-mode .feature-item p {
+            color: #94a3b8;
+        }
+        
+        body.dark-mode .type-tag {
+            background: #334155;
+            color: #60a5fa;
+        }
+        
+        body.dark-mode .process-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        
+        body.dark-mode .process-step {
+            background: #1e293b;
+        }
+        
+        body.dark-mode .step-content p {
+            color: #cbd5e1;
+        }
+        
+        body.dark-mode .additional-services {
+            background: #1e293b;
+        }
+        
+        body.dark-mode .additional-card {
+            background: #1e293b;
+            border-color: #334155;
+        }
+        
+        body.dark-mode .additional-card:hover {
+            border-color: #3b82f6;
+        }
+        
+        body.dark-mode .additional-card p {
+            color: #cbd5e1;
+        }
+        
+        body.dark-mode .additional-card ul li {
+            color: #94a3b8;
+        }
+        
+        body.dark-mode .additional-icon {
+            background: #334155;
+            color: #60a5fa;
+        }
+        
+        body.dark-mode .faq-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        
+        body.dark-mode .faq-item {
+            background: #1e293b;
+        }
+        
+        body.dark-mode .faq-answer {
+            color: #cbd5e1;
+            border-color: #334155;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .service-detail-card {
+                flex-direction: column !important;
+                gap: 40px;
+            }
+            
+            .service-detail-image {
+                min-width: auto;
+                width: 100%;
+            }
+            
+            .service-detail-icon {
+                font-size: 6rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .service-detail-content h3 {
+                font-size: 1.8rem;
+            }
+            
+            .process-step {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .step-number {
+                margin: 0 auto;
+            }
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .intro-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .service-detail-icon {
+                font-size: 4rem;
+            }
+            
+            .type-tags {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .additional-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </body>
 </html>
