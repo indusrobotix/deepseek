@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - IndusRoboTix Projects & Workshops</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-gears">
+            <div class="gear gear-large">
+                <div class="gear-teeth"></div>
+                <div class="gear-center"></div>
+            </div>
+            <div class="gear gear-small">
+                <div class="gear-teeth"></div>
+                <div class="gear-center"></div>
+            </div>
+            <div class="loading-text">LOADING GALLERY</div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-robot"></i></span>
+                <span class="logo-text">Indus<span class="logo-highlight">RoboTix</span></span>
+            </a>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Project Gallery</h1>
+            <p class="page-subtitle">See our custom robotics kits, chassis designs, and workshops in action</p>
+        </div>
+    </header>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="kits">Robotics Kits</button>
+                <button class="filter-btn" data-filter="chassis">Chassis Designs</button>
+                <button class="filter-btn" data-filter="workshops">Workshops</button>
+                <button class="filter-btn" data-filter="projects">Customer Projects</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Robotics Kits -->
+                <div class="gallery-item" data-category="kits">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Basic Robotics Starter Kit">
+                        <div class="gallery-overlay">
+                            <h3>Basic Robotics Starter Kit</h3>
+                            <p>Our most popular kit for beginners</p>
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="kits">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Advanced Automation Kit">
+                        <div class="gallery-overlay">
+                            <h3>Advanced Automation Kit</h3>
+                            <p>For intermediate robotics projects</p>
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chassis Designs -->
+                <div class="gallery-item" data-category="chassis">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Custom Acrylic Chassis">
+                        <div class="gallery-overlay">
+                            <h3>Custom Acrylic Chassis</h3>
+                            <p>Laser-cut acrylic designs</p>
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="chassis">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Modular Chassis System">
+                        <div class="gallery-overlay">
+                            <h3>Modular Chassis System</h3>
+                            <p>Expandable design for complex projects</p>
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workshops -->
+                <div class="gallery-item" data-category="workshops">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="School Robotics Workshop">
+                        <div class="gallery-overlay">
+                            <h3>School Robotics Workshop</h3>
+                            <p>Teaching robotics fundamentals to students</p>
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="workshops">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="University Workshop">
+                        <div class="gallery-overlay">
+                            <h3>University Workshop</h3>
+                            <p>Advanced robotics concepts for engineering students</p>
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Projects -->
+                <div class="gallery-item" data-category="projects">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Line Following Robot">
+                        <div class="gallery-overlay">
+                            <h3>Line Following Robot</h3>
+                            <p>Customer project using our starter kit</p>
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="projects">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Obstacle Avoiding Robot">
+                        <div class="gallery-overlay">
+                            <h3>Obstacle Avoiding Robot</h3>
+                            <p>Built with ultrasonic sensors and custom chassis</p>
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More items -->
+                <div class="gallery-item" data-category="workshops">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Teacher Training Session">
+                        <div class="gallery-overlay">
+                            <h3>Teacher Training Session</h3>
+                            <p>Preparing educators to teach robotics</p>
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="chassis">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Multi-layer Chassis">
+                        <div class="gallery-overlay">
+                            <h3>Multi-layer Chassis</h3>
+                            <p>Complex design for advanced robotics</p>
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="projects">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Robotic Arm Project">
+                        <div class="gallery-overlay">
+                            <h3>Robotic Arm Project</h3>
+                            <p>University project using our components</p>
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="kits">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Educational Kit">
+                        <div class="gallery-overlay">
+                            <h3>Educational Robotics Kit</h3>
+                            <p>Designed specifically for classroom use</p>
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">See Our Kits in Action</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <h3>Assembly Tutorial</h3>
+                        <p>Watch how to assemble our basic robotics kit</p>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <h3>Workshop Highlights</h3>
+                        <p>Highlights from our recent school workshop</p>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <h3>Chassis Design Process</h3>
+                        <p>See how we design custom acrylic chassis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="customer-projects">
+        <div class="container">
+            <h2 class="section-title">Customer Projects Showcase</h2>
+            <div class="projects-showcase">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="University Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>University Final Year Project</h3>
+                        <p class="project-description">A student team used our advanced kit to build an autonomous delivery robot for their final year project at NED University, Karachi.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Arduino</span>
+                            <span class="tech-tag">Ultrasonic Sensors</span>
+                            <span class="tech-tag">Custom Chassis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="School Competition">
+                    </div>
+                    <div class="project-info">
+                        <h3>School Robotics Competition</h3>
+                        <p class="project-description">A local school in Lahore used our educational kits to prepare for and win a regional robotics competition.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Line Following</span>
+                            <span class="tech-tag">IR Sensors</span>
+                            <span class="tech-tag">Educational Kit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Share Your Project With Us</h2>
+            <p>Have you built something amazing with our kits? We'd love to feature your project in our gallery.</p>
+            <a href="contact.html" class="btn btn-large">Submit Your Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon"><i class="fas fa-robot"></i></span>
+                        <span class="logo-text">Indus<span class="logo-highlight">RoboTix</span></span>
+                    </a>
+                    <p>Custom robotics kits with locally sourced components and custom acrylic chassis design.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Gallery Categories</h3>
+                    <ul>
+                        <li><a href="gallery.html">Robotics Kits</a></li>
+                        <li><a href="gallery.html">Chassis Designs</a></li>
+                        <li><a href="gallery.html">Workshops</a></li>
+                        <li><a href="gallery.html">Customer Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-user"></i> Furqan Khatti, Owner</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Pakistan</li>
+                        <li><i class="fas fa-envelope"></i> contact@indusrobotix.pk</li>
+                        <li><i class="fas fa-phone"></i> +92 XXX XXXXXXX</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Share Your Work</h3>
+                    <p>Tag us on social media with your IndusRoboTix projects for a chance to be featured in our gallery.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> IndusRoboTix. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="loading-animation.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // Gallery filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.gallery-filter .filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Show/hide gallery items based on filter
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // View button functionality
+            const viewBtns = document.querySelectorAll('.view-btn');
+            viewBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const parentItem = this.closest('.gallery-item');
+                    const category = parentItem.getAttribute('data-category');
+                    const title = this.parentElement.querySelector('h3').textContent;
+                    
+                    alert(`Viewing: ${title}\nCategory: ${category}\n\nThis would open a detailed view in a complete implementation.`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
